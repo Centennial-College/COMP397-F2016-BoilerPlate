@@ -1,33 +1,28 @@
-console.log("Game is starting");
+/**
+ * @file game.ts
+ * @author Kevin Ma kma45@my.centennialcollege.ca
+ * @studentID 300867968
+ * @date: September 17, 2016
+ * @description: This file is the entry point for the game.
+ * @version 0.1.0
+ */
 
-class Person {
-    protected _name: string;
+let canvas: HTMLElement;
+let stage: createjs.Stage;
 
-    constructor(name: string) {
-        this._name = name;
-    }
-
-    public speak(): void {
-        console.log(this._name + " says hello");
-    }
+function init(): void {
+    canvas = document.getElementById("canvas");
+    stage = new createjs.Stage(canvas);
+    stage.enableMouseOver(20);
+    createjs.Ticker.framerate = 60;
+    createjs.Ticker.on("tick", gameLoop, this);
 }
 
-class Student extends Person {
-    private _studentNum: number;
+function gameLoop(event: createjs.TickerEvent): void {
+    let myNewText: createjs.Text = new createjs.Text("Hello", "60px Consolas", "#000");
 
-    constructor(name: string, studentNum: number) {
-        super(name);
-        this._studentNum = studentNum;
-    }
-
-    public studies(): void {
-        console.log(this._name + " is studying");
-    }
+    stage.addChild(myNewText);
+    stage.update();
 }
 
-var person: Person = new Person("Kevin");
-person.speak();
-
-var student: Student = new Student("Donald", 123456789);
-student.speak();
-student.studies();
+window.onload = init;

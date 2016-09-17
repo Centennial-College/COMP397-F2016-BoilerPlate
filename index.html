@@ -1,16 +1,40 @@
+<!--
+    @file index.html
+    @author Kevin Ma kma45@my.centennialcollge.ca
+    @studentID 300867968
+    @date September 17, 2016
+    @description This file is the manifest for the web app
+    @version 0.1.0
+-->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMP397 - Week 2 Boilerplate</title>
+    <title>COMP397 - Web Game Programming Boilerplate</title>
+
     <!--CSS Section-->
+    <link rel="stylesheet" type="text/css" href="Content/reset.css">
+    <link rel="stylesheet" type="text/css" href="Scripts/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Scripts/lib/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="Scripts/lib/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="Content/game.css">
 </head>
 
 <body>
+    <div class="game">
+        <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+
     <!--JavaScript Scripts-->
+    <script src="Scripts/lib/jquery.min.js"></script>
+    <script src="Scripts/lib/bootstrap.min.js"></script>
+
+    <!--CreateJS Suite Scripts-->
     <script src="Scripts/lib/easeljs-0.8.2.min.js"></script>
     <script src="Scripts/lib/preloadjs-0.6.2.min.js"></script>
     <script src="Scripts/lib/soundjs-0.6.2.min.js"></script>
@@ -21,3 +45,5 @@
 </body>
 
 </html>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
