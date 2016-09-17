@@ -1,6 +1,8 @@
 {
   "globalDependencies": {
+    "bootstrap": "registry:dt/bootstrap#3.3.5+20160619023404",
     "easeljs": "registry:dt/easeljs#0.8.0+20160414061141",
+    "jquery": "registry:dt/jquery#1.10.0+20160908203239",
     "preloadjs": "registry:dt/preloadjs#0.6.0+20160602132935",
     "soundjs": "registry:dt/soundjs#0.6.0+20160317120654",
     "tweenjs": "registry:dt/tweenjs#0.6.0+20160317120654"
